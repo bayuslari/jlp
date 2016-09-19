@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <link href="http://cdn.datatables.net/1.10.6/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link type="text/css" rel="stylesheet" href="css/custom.css" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -155,31 +157,209 @@
         <main>
             <div class="right-col">
                 <div class="row">
+                    <!-- Col-9 -->
                     <div class="col s9">
-                        <div class="date-timeline">
-                            <p>August 2016</p>
+                        <!-- Text Form Input -->
+                        <div id="text-form">
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-box">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <!-- /Text Form Input -->
+                        <!-- Timeline -->
+                        <div class="timeline-wrap">
+                            <div class="date-timeline">
+                                <p>August 2016</p>
                             </div>
-                            <i class="timeline-icon fa fa-2x fa-star"></i>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-box">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="timeline-item">
+                                <div class="timeline-box">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <i class="timeline-icon fa fa-2x fa-star"></i>
                             </div>
-                            <i class="timeline-icon fa fa-2x fa-star"></i>
+                            <div class="timeline-item">
+                                <div class="timeline-box">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <i class="timeline-icon fa fa-2x fa-star"></i>
+                            </div>
                         </div>
+                        <!-- / Timeline -->
                     </div>
+                    <!-- / Col-9 -->
+                    <!-- Col-12 -->
+                    <div class="col s12">
+                        <!-- User Wrap -->
+                        <div class="users-wrap">
+                            <div class="user-head">
+                                <h4 class="user-title">Users</h4>
+                                <div class="user-search">
+                                    <form>
+                                        <div class="input-field">
+                                            <input id="search" type="search" placeholder="Search" required>
+                                            <label for="search"><i class="material-icons">search</i></label>
+                                            <i class="material-icons">close</i>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="user-list">
+                                <table id="data-table-simple" class="responsive-table display dataTable" cellspacing="0" role="grid" aria-describedby="data-table-simple_info">
+                                    <thead>
+                                        <tr role="row">
+                                            <th class="sorting_asc" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 146px;" aria-sort="ascending">Name</th>
+                                            <th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 105px;">ESS ID</th>
+                                            <th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 82px;">Email</th>
+                                            <th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 240px;">Role</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">Airi Satou</td>
+                                            <td>A012345</td>
+                                            <td>satou@gmail.com</td>
+                                            <td>
+                                                <span>Accountant</span>
+                                                <div class="user-detail">
+                                                    <a class='dropdown-button btn btn-user-detail' href='#' data-activates='dropdown-user-form'>
+                                                        <i class="fa fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <!-- Dropdown Structure -->
+                                                    <ul id='dropdown-user-form' class='dropdown-content'>
+                                                        <li><a href="#">Details</a></li>
+                                                        <li><a href="#">Edit</a></li>
+                                                        <li><a href="#">Deactivate</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td class="sorting_1">Angelica Ramos</td>
+                                            <td>M012345</td>
+                                            <td>ramos@gmail.com</td>
+                                            <td>
+                                                <span>Chief Executive Officer (CEO)</span>
+                                                <div class="user-detail">
+                                                    <a class='dropdown-button btn btn-user-detail' href='#' data-activates='dropdown-user-form'>
+                                                        <i class="fa fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <!-- Dropdown Structure -->
+                                                    <ul id='dropdown-user-form' class='dropdown-content'>
+                                                        <li><a href="#">Details</a></li>
+                                                        <li><a href="#">Edit</a></li>
+                                                        <li><a href="#">Deactivate</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">Ashton Cox</td>
+                                            <td>C012345</td>
+                                            <td>cox@gmail.com</td>
+                                            <td>
+                                                <span>Junior Technical Author</span>
+                                                <div class="user-detail">
+                                                    <a class='dropdown-button btn btn-user-detail' href='#' data-activates='dropdown-user-form'>
+                                                        <i class="fa fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <!-- Dropdown Structure -->
+                                                    <ul id='dropdown-user-form' class='dropdown-content'>
+                                                        <li><a href="#">Details</a></li>
+                                                        <li><a href="#">Edit</a></li>
+                                                        <li><a href="#">Deactivate</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td class="sorting_1">Bradley Greer</td>
+                                            <td>PT012345</td>
+                                            <td>greer@gmail.com</td>
+                                            <td>
+                                                <span>Software Engineer</span>
+                                                <div class="user-detail">
+                                                    <a class='dropdown-button btn btn-user-detail' href='#' data-activates='dropdown-user-form'>
+                                                        <i class="fa fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <!-- Dropdown Structure -->
+                                                    <ul id='dropdown-user-form' class='dropdown-content'>
+                                                        <li><a href="#">Details</a></li>
+                                                        <li><a href="#">Edit</a></li>
+                                                        <li><a href="#">Deactivate</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td class="sorting_1">Brenden Wagner</td>
+                                            <td>PC012345</td>
+                                            <td>wagner@gmail.com</td>
+                                            <td>
+                                                <span>Software Engineer</span>
+                                                <div class="user-detail">
+                                                    <a class='dropdown-button btn btn-user-detail' href='#' data-activates='dropdown-user-form'>
+                                                        <i class="fa fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <!-- Dropdown Structure -->
+                                                    <ul id='dropdown-user-form' class='dropdown-content'>
+                                                        <li><a href="#">Details</a></li>
+                                                        <li><a href="#">Edit</a></li>
+                                                        <li><a href="#">Deactivate</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a class="user-add-btn">
+                                <i class="fa fa-plus-circle"></i>
+                            </a>
+                        </div>
+                        <!-- / User Wrap -->
+                        <!-- Add User Form -->
+                        <div class="add-user-wrap">
+                            <div class="row">
+                                <div class="col s9">
+                                    <div class="user-profile">
+                                        <form>
+                                            <div class="row">
+                                                <div class="input-field col s6">
+                                                    <input id="first_name" type="text">
+                                                    <label for="first_name" class="">First Name</label>
+                                                </div>
+                                                <div class="input-field col s6">
+                                                    <input id="last_name" type="text">
+                                                    <label for="last_name">Last Name</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s12">
+                                                    <label>Birth Date</label>
+                                                    <input type="date" id="dob" class="datepicker">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="user-contact">
+                                    </div>
+                                </div>
+                                <div class="col s-3">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Add User Form -->
+                    </div>
+                    <!-- / Col-12 -->
                 </div>
             </div>
         </main>
     </div>
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="requirejs/require.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/picker.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
 </body>
 
