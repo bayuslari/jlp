@@ -8,7 +8,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
-    <link href="http://cdn.datatables.net/1.10.6/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://cdn.datatables.net/1.10.6/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/custom.css" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -317,31 +317,98 @@
                         <!-- Add User Form -->
                         <div class="add-user-wrap">
                             <div class="row">
+                                <div class="col s12">
+                                    <div class="user-head">
+                                        <h4 class="user-title">Add/Edit User</h4>
+                                    </div>
+                                </div>
                                 <div class="col s9">
-                                    <div class="user-profile">
+                                    <div class="user-profile user-add-box">
+                                        <div class="user-profile-title">
+                                            User Profile
+                                        </div>
                                         <form>
                                             <div class="row">
                                                 <div class="input-field col s6">
-                                                    <input id="first_name" type="text">
+                                                    <input id="first_name" type="text" class="validate" placeholder="First Name">
                                                     <label for="first_name" class="">First Name</label>
                                                 </div>
                                                 <div class="input-field col s6">
-                                                    <input id="last_name" type="text">
+                                                    <input id="last_name" type="text" class="validate" placeholder="Last Name">
                                                     <label for="last_name">Last Name</label>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col s12">
+                                                <div class="input-field col s6">
+                                                    <input id="ess-id" type="text" placeholder="ESS ID">
+                                                    <label for="ess-id" class="">ESS ID</label>
+                                                </div>
+                                                <div class="input-field col s6">
+                                                    <input id="email" type="text" placeholder="E-mail">
+                                                    <label for="email">E-mail</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s6" id="dob">
                                                     <label>Birth Date</label>
-                                                    <input type="date" id="dob" class="datepicker">
+                                                    <input type="date" class="datepicker">
+                                                    <i class="fa fa-calendar"></i>
+                                                </div>
+                                                <div class="col s6" id="gender">
+                                                    <label for="gender">Gender</label>
+                                                    <ul class="tabs">
+                                                        <li class="tab col s3"><a href="#female">Female</a></li>
+                                                        <li class="tab col s3"><a class="active" href="#male">Male</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s6 select-form">
+                                                    <label>Role</label>
+                                                    <select style="display:block;">
+                                                        <option value="1">Consultant</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                    </select>
+                                                    <a href="#" class="view-role">
+                                                        <i class="fa fa-shield"></i>
+                                                        <span>View roles</span>
+                                                    </a>
+                                                </div>
+                                                <div class="col s6 select-form">
+                                                    <label>Manager</label>
+                                                    <select style="display:block;">
+                                                        <option value="1">Pai Joe</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="user-contact">
+                                    <div class="user-contact user-add-box">
+                                        <div class="user-profile-title">
+                                            Contact
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input id="phone-contact" type="text" placeholder="Phone">
+                                                <label for="phone-contact">Phone</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-add-user">
+                                        <a class="waves-effect waves-light btn">Save</a>
+                                        <a class="waves-effect waves-light btn btn-wire">Cancel</a>
                                     </div>
                                 </div>
-                                <div class="col s-3">
+                                <div class="col s3">
+                                    <div class="user-pic">
+                                        <img src="img/ava.png" alt="">
+                                        <a href="#" class="img-overlay">
+                                            <span>Click to upload</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

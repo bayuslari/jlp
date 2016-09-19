@@ -5,6 +5,7 @@ var app = {
         app.submenuNormalize();
         app.textForm();
         app.datePick();
+        app.materiSelect();
     },
     resize: function() {
 
@@ -36,6 +37,11 @@ var app = {
         jQuery("#dob").click(function(event) {
             event.stopPropagation();
             jQuery(".datepicker").first().pickadate("picker").open();
+        });
+    },
+    materiSelect: function() {
+        jQuery(document).ready(function() {
+            jQuery('select').material_select();
         });
     },
 };

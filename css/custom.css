@@ -1,9 +1,10 @@
  /*General */
  
-  body {
+ body {
      background-color: #eceff1;
      font-size: 16px;
  }
+ 
  img {
      vertical-align: middle;
  }
@@ -11,8 +12,6 @@
  p {
      margin-top: 0;
  }
- 
-
  /*Left Column*/
  
  .left-col {
@@ -457,4 +456,96 @@
      font-size: 50px;
      color: #0277bd;
      cursor: pointer;
+ }
+ /*Add User Wrap*/
+ 
+ .add-user-wrap {
+     clear: both;
+ }
+ 
+ #dob label {
+     display: block;
+     width: 100%;
+ }
+ 
+ #dob .datepicker {
+     display: inline-block;
+     width: 150px;
+ }
+ 
+ .select-form {
+     position: relative;
+ }
+ 
+ .view-role {
+     margin-top: 5px;
+     float: right;
+ }
+ 
+ .user-add-box {
+     padding: 15px 5px;
+     border: 1px solid #9e9e9e;
+     position: relative;
+     margin-top: 15px;
+     margin-bottom: 30px;
+ }
+ 
+ .user-profile-title {
+     position: absolute;
+     background-color: #eceff1;
+     top: -13px;
+     left: 5px;
+     padding: 0 5px;
+ }
+ 
+ .user-contact .row {
+     margin: 0;
+ }
+ 
+ .user-pic img {
+     object-fit: cover;
+     width: 100%;
+     height: auto;
+ }
+ 
+ .user-pic {
+     margin-top: 15px;
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .img-overlay {
+     position: absolute;
+     bottom: 0;
+     transform: translateY(50px);
+     background-color: rgba(0, 0, 0, 0.45);
+     width: 100%;
+     color: #fff;
+     opacity: 0;
+     transition: all .3s ease-in-out;
+     text-align: center;
+     padding: 10px;
+ }
+ 
+ .user-pic:hover .img-overlay {
+     opacity: 1;
+     transform: translateY(0);
+ }
+ 
+ #gender .tabs,
+ #gender .tab {
+     height: 38px;
+     line-height: 38px;
+ }
+ 
+ #gender .tab a {
+     color: #0277bd;
+ }
+ 
+ #gender .tab:hover a {
+     color: #4fc3f7;
+ }
+ 
+ #gender .tabs .indicator {
+     background-color: #4fc3f7;
  }
