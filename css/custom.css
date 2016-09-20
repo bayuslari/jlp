@@ -551,20 +551,8 @@
      transform: translateY(0);
  }
  
- #gender .tabs,
- #gender .tab {
-     height: 38px;
-     line-height: 38px;
- }
- 
- #gender .tab a {
-     color: #0277bd;
- }
- 
- #gender .tab:hover a {
-     color: #4fc3f7;
- }
- 
- #gender .tabs .indicator {
-     background-color: #4fc3f7;
+ #gender label {
+     display: block;
+     width: 100%;
+     margin-bottom: 10px;
  }
