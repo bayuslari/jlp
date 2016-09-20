@@ -3,7 +3,7 @@ var app = {
     init: function() {
         app.navbarChange();
         app.submenuNormalize();
-        app.textForm();
+        // app.textForm();
         app.datePick();
         app.materiSelect();
     },
@@ -34,7 +34,7 @@ var app = {
             max: new Date(2000, 11, 31),
             closeOnSelect: true,
         });
-        jQuery("#dob").click(function(event) {
+        jQuery("#dob .datepicker").click(function(event) {
             event.stopPropagation();
             jQuery(".datepicker").first().pickadate("picker").open();
         });
