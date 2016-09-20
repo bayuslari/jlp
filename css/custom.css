@@ -14,6 +14,30 @@
      line-height: 1.6;
      margin-top: 0;
  }
+ 
+ h1 {
+     font-size: 36px;
+ }
+ 
+ h2 {
+     font-size: 30px;
+ }
+ 
+ h3 {
+     font-size: 24px;
+ }
+ 
+ h4 {
+     font-size: 18px;
+ }
+ 
+ h5 {
+     font-size: 14px;
+ }
+ 
+ h6 {
+     font-size: 12px;
+ }
  /*Left Column*/
  
  .left-col {
@@ -195,10 +219,11 @@
      color: #039be5;
      box-shadow: none;
      padding: 0;
+     text-transform: capitalize;
  }
  
  .nav-right .dropdown-button i {
-     font-size: 14px;
+     font-size: 12px;
  }
  
  .nav-right .dropdown-content {
@@ -216,6 +241,7 @@
  .user-avatar {
      position: relative;
      display: inline-block;
+     font-size: 14px;
  }
  
  .user-avatar img {
@@ -525,6 +551,7 @@
      object-fit: cover;
      width: 100%;
      height: auto;
+     border: 1px solid #9e9e9e;
  }
  
  .user-pic {
